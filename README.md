@@ -1,62 +1,31 @@
 
+
 # Abersoft Test
 
-This project is test for position Flutter Developer in Abersoft
+This project is test for position Flutter Developer at Abersoft
 
-## TODO
-#### - Change Root Folder Name
-#### - Delete folder .git
-#### - Change package name on Android and iOS
+## Getting Started
+```bash
+$ git clone https://github.com/ukieTux/abersoft_test.git
+$ cd abersoft_test
+$ flutter run
+```
 
- - Android :
- 
-**AndroidManifest.xml :**
+## Libraries
 
-     <application android:name="io.flutter.app.FlutterApplication" android:label="TheNameOfYourApp">
-     <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="your.package.name">
+ - [x] [Flutter BLoC](https://pub.dev/packages/flutter_bloc) - State Management
+  - [x] [Flutter Screen Util](https://pub.dev/packages/flutter_screenutil) - Responsive UI Helper
+  - [x] [Get It](https://pub.dev/packages/get_it) - Dependencies Injection
+  - [x] [Flutter SVG](https://pub.dev/packages/flutter_svg) - Load SVG File
+  - [x] [Dio](https://pub.dev/packages/dio) - Http Client
+  - [x] [OkToast](https://pub.dev/packages/oktoast) - Custom Toast
 
-  **app/build.gradle**
+## API
+ This app consume API from https://reqres.in/ . Use Register and Login API.
 
-    defaultConfig {
-    	 **applicationId "your.package.name"**
-    	 minSdkVersion 16
-    	 targetSdkVersion 27
-    	 versionCode 1
-    	 versionName "1.0"
-    	 testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    	 }
-
-**Change package name  (MainActivity.java/MainActivity.kt)**
-
- **package your.package.name;**
- 
- **From:**
-
-
-    android\app\src\main\java\com\example\name
-
-**To :**
-
-     android\app\src\main\java\your\package\name
-
- - iOS
-
-
-Edit file **Info.plist** in  **ios/Runner**
-
-
-    <key>CFBundleIdentifier</key>
-    <string>com.your.packagename</string>
-
-
-### Or Lazy Way
-
-    $ cd abersoft (you can change it when you clone project)
-    $ flutter create --org package.name project_name
-    $ rm -Rf android ios
-    $ mv project_name/ios .
-    $ mv project_name/android .
-    $ rm -Rf project_name
-
-### Need to create script to recreate folder android and iOS
+### Use the email below to Register or Login
+```
+eve.holt@reqres.in
+```
+***for password you can input anything***
 
