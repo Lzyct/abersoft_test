@@ -3,7 +3,7 @@ import 'package:abersoft/utils/dio_interceptor.dart';
 import 'package:dio/dio.dart';
 
 class API {
-  static const BASE_URL = "https://reqres.in/";
+  static const BASE_URL = "https://reqres.in";
 
   Dio getDio({String token}) {
     return Dio(BaseOptions(
@@ -11,7 +11,6 @@ class API {
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
-          'Authorization': sl<PrefManager>().getToken()
         },
         receiveTimeout: 60000,
         connectTimeout: 60000,
