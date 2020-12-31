@@ -7,6 +7,10 @@ class RestApiImpl with RestAPI {
   var _dio = sl<API>().getDio();
 
   @override
-  Future<Response> test({Map<String, String> params}) async =>
-      await _dio.post("/api/token", data: params);
+  Future<Response> login({Map<String, String> params}) async =>
+      await _dio.post("/api/login", data: params);
+
+  @override
+  Future<Response> register({Map<String, String> params}) async =>
+      await _dio.post("/api/register", data: params);
 }

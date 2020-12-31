@@ -1,8 +1,10 @@
+import 'package:abersoft/blocs/blocs.dart';
 import 'package:abersoft/pages/pages.dart';
 import 'package:abersoft/resources/resources.dart';
 import 'package:abersoft/utils/utils.dart';
 import 'package:abersoft/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 ///*********************************************
 /// Created by ukietux on 12/31/20 with ♥
@@ -21,7 +23,7 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Parent(
-      appBar: null,
+      appBar: context.noAppBarDark(),
       isScroll: false,
       child: Stack(
         children: [
@@ -34,7 +36,10 @@ class _WelcomePageState extends State<WelcomePage> {
                 color: Colors.white,
                 titleColor: Colors.black,
                 onPressed: () {
-                  context.goTo(RegisterPage());
+                  context.goTo(BlocProvider(
+                    create: (_) => RegisterBloc(),
+                    child: RegisterPage(),
+                  ));
                 },
               )),
           Positioned(
@@ -46,7 +51,10 @@ class _WelcomePageState extends State<WelcomePage> {
               color: Colors.white,
               titleColor: Colors.black,
               onPressed: () {
-                context.goTo(LoginPage());
+                context.goTo(BlocProvider(
+                  create: (_) => LoginBloc(),
+                  child: LoginPage(),
+                ));
               },
             ),
           )

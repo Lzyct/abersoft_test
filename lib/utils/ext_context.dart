@@ -69,12 +69,20 @@ extension ContextExtensions on BuildContext {
     );
   }
 
-  // No AppBar
+  // No AppBar Light
   noAppBarLight() => PreferredSize(
       child: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0.0,
           brightness: Brightness.light),
+      preferredSize: Size.fromHeight(0.0));
+
+  // No AppBar Dark
+  noAppBarDark() => PreferredSize(
+      child: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0.0,
+          brightness: Brightness.dark),
       preferredSize: Size.fromHeight(0.0));
 
   /// Dimens should define in context extensions
@@ -157,15 +165,4 @@ extension ContextExtensions on BuildContext {
     return MediaQuery.of(this).size.width / 6;
   }
 
-  logout() {
-    //clear shared Preferences
-    sl<PrefManager>().logout();
-    /*this.goToReplacePageRoute(MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (context) => LoginBloc()),
-        BlocProvider(create: (context) => ProfileBloc()),
-      ],
-      child: LoginPage(),
-    ));*/
-  }
 }

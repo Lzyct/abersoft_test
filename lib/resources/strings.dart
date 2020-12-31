@@ -12,6 +12,9 @@ class Strings {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas scelerisque porttitor turpis viverra lobortis convallis. Libero tristique donec turpis elit adipiscing sit faucibus tincidunt. Erat porttitor amet, nibh id lorem. Volutpat quam vestibulum egestas ut odio odio. Nunc non, feugiat a diam at lacus augue. Sit lacus pharetra eget feugiat aliquam enim adipiscing. Purus nec tortor tellus, neque montes. Gravida ornare eu viverra libero. Vulputate massa turpis posuere nibh dolor pulvinar bibendum. Viverra scelerisque ut dignissim at sit s";
 
   static const errorEmpty = "Field can't be empty";
-
   static const invalidEmail = "Invalid email";
+  static const successRegister = "Register Successfully";
+  static const successLogin = "Login Successfully";
+
+  static var pleaseWait = "Please wait...";
 }
